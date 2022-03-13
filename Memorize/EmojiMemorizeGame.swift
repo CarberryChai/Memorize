@@ -13,7 +13,7 @@ final class EmojiMemorizeGame: ObservableObject {
   
   private static let emojis = ["🍏", "🍎", "🍐", "🍊", "🍋", "🍌", "🍉", "🍇", "🍓", "🫐", "🍒", "🍑", "🥭", "🍍", "🥝", "🍅", "🍆", "🥑", "🥦", "🥬", "🌶", "🌽", "🥕", "🍠"]
 
-  @Published private var model: MemorizeGame<String> = MemorizeGame(pairsOfCards: 6) { idx in
+  @Published private var model: MemorizeGame<String> = MemorizeGame(pairsOfCards: 4) { idx in
     EmojiMemorizeGame.emojis[idx]
   }
 
