@@ -21,6 +21,7 @@ struct MemorizeGame<CardContent: Equatable> {
       cards.append(Card(id: i * 2, content: getCardContent(i)))
       cards.append(Card(id: i * 2 + 1, content: getCardContent(i)))
     }
+    shuffle()
   }
 
   mutating func choose(_ card: Card) {
@@ -35,6 +36,10 @@ struct MemorizeGame<CardContent: Equatable> {
     } else {
       indexOfTheOneAndOnlyFaceUpCard = idx
     }
+  }
+  
+  mutating func shuffle() {
+    cards.shuffle()
   }
 
   struct Card: Identifiable {
